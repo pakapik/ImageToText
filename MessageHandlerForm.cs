@@ -6,7 +6,7 @@ using Tulpep.NotificationWindow;
 
 namespace ImageToText
 {
-    public partial class MessageHandlerForm : Form
+    public partial class MessageHandlerForm : Form, IDisposable
     {
         private ClipBoardUpdaterImageToText _updater;
 
@@ -46,7 +46,7 @@ namespace ImageToText
             );
         }
 
-        private static PopupNotifier PopupInit()
+        private PopupNotifier PopupInit()
         {
             var popup = new PopupNotifier
             {

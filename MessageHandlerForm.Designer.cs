@@ -15,6 +15,7 @@
         {
             if (disposing && (components != null))
             {
+                UnregisterHotKey(Handle, 0);
                 components.Dispose();
             }
             base.Dispose(disposing);
